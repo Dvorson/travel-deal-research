@@ -1,0 +1,6 @@
+interface:
+  display_name: "Travel Deal Research"
+  short_description: "Compare total trip costs across overlooked sources"
+  default_prompt: "Use $research-travel-deals to research flexible travel options, compare verified total costs, and explain the best choices before planning the itinerary."
+policy:
+  allow_implicit_invocation: true

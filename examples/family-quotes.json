@@ -1,0 +1,137 @@
+{
+  "example_notice": "SYNTHETIC TEST DATA ONLY. These are invented offers and reserved example.com URLs, not live travel quotes. The live and verified fields simulate supplied evidence solely to demonstrate the comparator. Run with --now 2026-11-14T12:00:00Z for repeatable results.",
+  "base_currency": "EUR",
+  "party": {
+    "adults": 2,
+    "children_ages": [6, 9],
+    "infants": 0
+  },
+  "required_categories": [
+    "transport",
+    "lodging",
+    "origin_access",
+    "destination_transfers"
+  ],
+  "offers": [
+    {
+      "id": "synthetic-package",
+      "name": "SYNTHETIC: complete package for four travellers",
+      "party": {"adults": 2, "children_ages": [6, 9], "infants": 0},
+      "constraints_ok": true,
+      "live": true,
+      "evidence_stage": "terms_checked",
+      "observed_at": "2026-11-14T11:00:00Z",
+      "valid_until": "2026-11-14T13:00:00Z",
+      "source_url": "https://example.com/synthetic-travel/package",
+      "hours": "7.5",
+      "components": [
+        {
+          "label": "Invented flights, stay and destination transfers for the full party",
+          "covers": ["transport", "lodging", "destination_transfers"],
+          "amount": "1800.00",
+          "currency": "EUR",
+          "status": "verified"
+        },
+        {
+          "label": "Invented return access to origin airport for the full party",
+          "covers": ["origin_access"],
+          "amount": "70.50",
+          "currency": "EUR",
+          "status": "verified"
+        }
+      ],
+      "refundables": [
+        {
+          "label": "Invented refundable accommodation security deposit",
+          "amount": "200.00",
+          "currency": "EUR",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-independent",
+      "name": "SYNTHETIC: complete separately booked alternative",
+      "party": {"adults": 2, "children_ages": [6, 9], "infants": 0},
+      "constraints_ok": true,
+      "live": true,
+      "evidence_stage": "selected",
+      "observed_at": "2026-11-14T11:15:00Z",
+      "valid_until": "2026-11-14T13:00:00Z",
+      "source_url": "https://example.com/synthetic-travel/independent",
+      "hours": "9.0",
+      "components": [
+        {
+          "label": "Invented return flights with required bags for four travellers",
+          "covers": ["transport"],
+          "amount": "1000.00",
+          "currency": "EUR",
+          "status": "verified"
+        },
+        {
+          "label": "Invented accommodation total including mandatory charges",
+          "covers": ["lodging"],
+          "amount": "800.00",
+          "currency": "EUR",
+          "status": "verified"
+        },
+        {
+          "label": "Invented origin airport return transport for the full party",
+          "covers": ["origin_access"],
+          "amount": "70.00",
+          "currency": "EUR",
+          "status": "verified"
+        },
+        {
+          "label": "Invented destination airport return transfers for the full party",
+          "covers": ["destination_transfers"],
+          "amount": "120.00",
+          "currency": "EUR",
+          "status": "verified"
+        }
+      ],
+      "refundables": []
+    },
+    {
+      "id": "synthetic-cheap-lead",
+      "name": "SYNTHETIC: tempting partial quote with unknown destination transfers",
+      "party": {"adults": 2, "children_ages": [6, 9], "infants": 0},
+      "constraints_ok": true,
+      "live": true,
+      "evidence_stage": "lead",
+      "observed_at": "2026-11-14T11:30:00Z",
+      "valid_until": "2026-11-14T13:00:00Z",
+      "source_url": "https://example.com/synthetic-travel/incomplete-lead",
+      "components": [
+        {
+          "label": "Invented flight subtotal for the full party",
+          "covers": ["transport"],
+          "amount": "600.00",
+          "currency": "EUR",
+          "status": "verified"
+        },
+        {
+          "label": "Invented accommodation subtotal",
+          "covers": ["lodging"],
+          "amount": "700.00",
+          "currency": "EUR",
+          "status": "verified"
+        },
+        {
+          "label": "Invented origin airport return transport",
+          "covers": ["origin_access"],
+          "amount": "50.00",
+          "currency": "EUR",
+          "status": "verified"
+        },
+        {
+          "label": "Destination transfer price has not been supplied",
+          "covers": ["destination_transfers"],
+          "amount": null,
+          "currency": "EUR",
+          "status": "unknown"
+        }
+      ]
+    }
+  ]
+}
